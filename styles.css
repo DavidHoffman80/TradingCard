@@ -1,0 +1,101 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+}
+
+#card{
+  position: relative;
+  top: 40px;
+  left: 40px;
+  width: 330px;
+  height: 638px;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  padding: 10px;
+  background: linear-gradient(blue, white, green);
+}
+
+#card:before{
+  content: '';
+  width: 330px;
+  height: 638px;
+  background: linear-gradient(tomato, teal);
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 15px;
+  transform: rotate(-3deg);
+  z-index: -10;
+  backface-visibility: hidden;
+}
+
+#card:after{
+  content: '';
+  width: 330px;
+  height: 638px;
+  background: linear-gradient(red, orange);
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: -5px;
+  transform: rotate(3deg);
+  z-index: -10;
+  backface-visibility: hidden;
+}
+
+.header{
+  display: grid;
+  grid-template-columns: 1fr 30px;
+  width: 97%;
+}
+
+.header h1{
+  justify-self: start;
+  margin: 0 0 .5rem 0;
+}
+
+.header img{
+  width: 25px;
+  justify-self: end;
+  align-self: center;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.falcon{
+  width: 300px;
+  margin: 0;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.animal-info{
+  width: 300px;
+  margin: 1.5rem 0 0 0;
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background: white;
+}
+
+.animal-info ul{
+  list-style: none;
+  padding-left: 20px;
+}
+
+.animal-info ul li span{
+  font-weight: bold;
+}
+
+.animal-info p{
+  margin: .5rem 0 .5rem 0;
+}
